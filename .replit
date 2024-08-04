@@ -1,0 +1,12 @@
+modules = ["python-3.8", "python-3.9", "python-3.11", "python-3.10", "web", "zig-0.11", "python-with-prybar-3.10"]
+run = "python app.py"
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python app.py"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+exposeLocalhost = true
